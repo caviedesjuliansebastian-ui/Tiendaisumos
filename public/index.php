@@ -55,7 +55,7 @@
                         <a class="nav-link" href="#portales" id="navLinkPortales">Portales</a>
                     </li>
                     <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
-                        <a class="btn btn-primary-custom" href="../prueba/login.php" id="navBtnAcceder">
+                        <a class="btn btn-primary-custom" href="../views/auth/login.php" id="navBtnAcceder">
                             <i class="bi bi-person-fill-check me-2"></i>Acceder
                         </a>
                     </li>
@@ -73,7 +73,7 @@
                     <h1 class="hero-title" id="mainHeroTitle">Optimiza tu Inventario Agrícola y Potencia tus Ventas</h1>
                     <p class="hero-subtitle" id="mainHeroSubtitle">Control total de fertilizantes, semillas, pesticidas y herramientas en tiempo real. La plataforma digital definitiva para distribuidores y almacenes de insumos agrícolas.</p>
                     <div class="d-flex flex-column flex-sm-row gap-3 justify-content-center justify-content-lg-start mt-4">
-                        <a href="../prueba/login.php" class="btn btn-primary-custom btn-lg px-4 py-3" id="heroBtnLogin">
+                        <a href="../views/auth/login.php" class="btn btn-primary-custom btn-lg px-4 py-3" id="heroBtnLogin">
                             <i class="bi bi-box-arrow-in-right me-2"></i>Iniciar Sesión
                         </a>
                         <a href="#demo" class="btn btn-outline-custom btn-lg px-4 py-3" id="heroBtnDemo">
@@ -235,7 +235,7 @@
                         <div class="fs-1 text-primary-color mb-3"><i class="bi bi-shield-lock-fill"></i></div>
                         <h3 class="portal-title">Portal Administrador</h3>
                         <p class="portal-desc">Gestión completa de usuarios, auditorías de compras, reportes de rentabilidad, importación de lotes y configuración del sistema.</p>
-                        <a href="../prueba/login.php" class="btn btn-primary-custom w-100 py-2" id="portalBtnAdmin">Ingresar como Admin</a>
+                        <a href="../views/auth/login.php" class="btn btn-primary-custom w-100 py-2" id="portalBtnAdmin">Ingresar como Admin</a>
                     </div>
                 </div>
                 
@@ -245,13 +245,13 @@
                         <div class="fs-1 text-success mb-3"><i class="bi bi-people-fill"></i></div>
                         <h3 class="portal-title">Portal Vendedor / Cliente</h3>
                         <p class="portal-desc">Facturación ágil en mostrador, consulta de existencias por pasillos, registro rápido de clientes y visualización de pedidos.</p>
-                        <a href="../prueba/login.php" class="btn btn-outline-success border-2 w-100 py-2 fw-semibold" id="portalBtnSeller">Ingresar como Vendedor</a>
+                        <a href="../views/auth/login.php" class="btn btn-outline-success border-2 w-100 py-2 fw-semibold" id="portalBtnSeller">Ingresar como Vendedor</a>
                     </div>
                 </div>
             </div>
 
             <div class="text-center mt-5">
-                <p class="text-muted">¿Aún no tienes una cuenta para tu almacén? <a href="../prueba/register.php" class="text-primary-color fw-bold text-decoration-none" id="portalRegisterLink">Regístrate gratis aquí</a></p>
+                <p class="text-muted">¿Aún no tienes una cuenta para tu almacén? <a href="../views/auth/register.php" class="text-primary-color fw-bold text-decoration-none" id="portalRegisterLink">Regístrate gratis aquí</a></p>
             </div>
         </div>
     </section>
