@@ -1,0 +1,497 @@
+/* Custom styles for AgroStock Landing Page */
+
+/* Import Outfit Font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+    --primary-color: #2d6a4f;
+    --primary-dark: #1b4332;
+    --primary-light: #52b788;
+    --primary-ultra-light: #d8f3dc;
+    --accent-color: #ffb703;
+    --accent-dark: #fb8500;
+    --dark-color: #1a1e1b;
+    --light-bg: #f4f7f5;
+    --white: #ffffff;
+    --gray-muted: #6c757d;
+    --border-color: #e2e8f0;
+    --card-shadow: 0 10px 30px rgba(45, 106, 79, 0.08);
+    --card-shadow-hover: 0 20px 40px rgba(45, 106, 79, 0.15);
+    --font-main: 'Outfit', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+body {
+    font-family: var(--font-main);
+    color: var(--dark-color);
+    background-color: var(--light-bg);
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+    color: var(--primary-dark);
+}
+
+.text-accent {
+    color: var(--accent-color);
+}
+
+.text-primary-color {
+    color: var(--primary-color);
+}
+
+/* Navigation Bar */
+.navbar {
+    background-color: rgba(255, 255, 255, 0.9) !important;
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border-bottom: 1px solid rgba(45, 106, 79, 0.1);
+    transition: all 0.3s ease;
+    z-index: 1050;
+}
+
+.navbar-brand {
+    font-weight: 800;
+    font-size: 1.5rem;
+    color: var(--primary-dark) !important;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.navbar-brand i {
+    color: var(--primary-light);
+    font-size: 1.8rem;
+}
+
+.nav-link {
+    font-weight: 500;
+    color: var(--dark-color) !important;
+    padding: 0.5rem 1rem !important;
+    transition: color 0.2s ease;
+}
+
+.nav-link:hover, .nav-link.active {
+    color: var(--primary-color) !important;
+}
+
+/* Buttons */
+.btn-primary-custom {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    color: var(--white);
+    font-weight: 600;
+    padding: 0.6rem 1.8rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(45, 106, 79, 0.2);
+}
+
+.btn-primary-custom:hover {
+    background-color: var(--primary-dark);
+    border-color: var(--primary-dark);
+    color: var(--white);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(45, 106, 79, 0.3);
+}
+
+.btn-outline-custom {
+    background-color: transparent;
+    border: 2px solid var(--white);
+    color: var(--white);
+    font-weight: 600;
+    padding: 0.6rem 1.8rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.btn-outline-custom:hover {
+    background-color: var(--white);
+    color: var(--primary-dark);
+    transform: translateY(-2px);
+}
+
+/* Hero Section */
+.hero-section {
+    position: relative;
+    background: linear-gradient(135deg, rgba(27, 67, 50, 0.95) 0%, rgba(45, 106, 79, 0.85) 100%), 
+                url('../img/agro_hero.png') no-repeat center center/cover;
+    padding: 160px 0 120px 0;
+    color: var(--white);
+    overflow: hidden;
+}
+
+.hero-section::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background: linear-gradient(to top, var(--light-bg), transparent);
+    pointer-events: none;
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    line-height: 1.2;
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+    color: var(--white);
+}
+
+.hero-subtitle {
+    font-size: 1.25rem;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 2rem;
+    max-width: 650px;
+}
+
+/* Quick Stats Bar */
+.stats-container {
+    margin-top: -50px;
+    position: relative;
+    z-index: 10;
+}
+
+.stat-card {
+    background: var(--white);
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: var(--card-shadow);
+    border: 1px solid rgba(45, 106, 79, 0.05);
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--card-shadow-hover);
+}
+
+.stat-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: var(--primary-ultra-light);
+    color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    margin: 0 auto 1rem auto;
+}
+
+.stat-number {
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--primary-dark);
+    margin-bottom: 0.25rem;
+}
+
+.stat-label {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--gray-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Features Section */
+.feature-card {
+    background-color: var(--white);
+    border: 1px solid rgba(45, 106, 79, 0.05);
+    border-radius: 16px;
+    padding: 2.5rem 2rem;
+    height: 100%;
+    box-shadow: var(--card-shadow);
+    transition: all 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--card-shadow-hover);
+    border-color: rgba(82, 183, 136, 0.3);
+}
+
+.feature-icon-wrapper {
+    width: 65px;
+    height: 65px;
+    border-radius: 12px;
+    background-color: var(--primary-ultra-light);
+    color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.feature-card:hover .feature-icon-wrapper {
+    background-color: var(--primary-color);
+    color: var(--white);
+    transform: rotate(5deg);
+}
+
+.feature-title {
+    font-size: 1.35rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: var(--primary-dark);
+}
+
+.feature-description {
+    color: var(--gray-muted);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* Interactive Demo Showcase */
+.demo-section {
+    background-color: var(--white);
+    border-radius: 24px;
+    padding: 3rem;
+    box-shadow: var(--card-shadow);
+    border: 1px solid rgba(45, 106, 79, 0.04);
+}
+
+.search-box {
+    position: relative;
+}
+
+.search-box i {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--gray-muted);
+}
+
+.search-box .form-control {
+    padding-left: 45px;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+}
+
+.search-box .form-control:focus {
+    border-color: var(--primary-light);
+    box-shadow: 0 0 0 0.25rem rgba(82, 183, 136, 0.15);
+}
+
+.demo-table-container {
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+}
+
+.demo-table {
+    margin-bottom: 0;
+}
+
+.demo-table th {
+    background-color: var(--primary-dark);
+    color: var(--white);
+    font-weight: 600;
+    border-bottom: none;
+    padding: 1rem;
+}
+
+.demo-table td {
+    padding: 1rem;
+    vertical-align: middle;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.badge-stock {
+    font-weight: 600;
+    font-size: 0.8rem;
+    padding: 0.4em 0.8em;
+    border-radius: 20px;
+}
+
+.badge-stock.suficiente {
+    background-color: #d8f3dc;
+    color: #1b4332;
+}
+
+.badge-stock.critico {
+    background-color: #ffe3e0;
+    color: #c91807;
+}
+
+.badge-stock.agotado {
+    background-color: #e9ecef;
+    color: #495057;
+}
+
+/* Action Gateways (Portales) */
+.portal-card {
+    background: linear-gradient(135deg, var(--white) 0%, rgba(244, 247, 245, 0.5) 100%);
+    border: 1px solid rgba(45, 106, 79, 0.08);
+    border-radius: 16px;
+    padding: 2.5rem;
+    text-align: center;
+    box-shadow: var(--card-shadow);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.portal-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background-color: var(--primary-light);
+    transition: all 0.3s ease;
+}
+
+.portal-card:hover::before {
+    height: 8px;
+    background-color: var(--accent-color);
+}
+
+.portal-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--card-shadow-hover);
+}
+
+.portal-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: var(--primary-dark);
+}
+
+.portal-desc {
+    color: var(--gray-muted);
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+    min-height: 50px;
+}
+
+/* Footer Section */
+.footer-section {
+    background-color: var(--primary-dark);
+    color: rgba(255, 255, 255, 0.8);
+    padding: 5rem 0 2rem 0;
+    border-top: 5px solid var(--accent-color);
+}
+
+.footer-section h5 {
+    color: var(--white);
+    font-size: 1.15rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+}
+
+.footer-links-list {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 0;
+}
+
+.footer-links-list li {
+    margin-bottom: 0.75rem;
+}
+
+.footer-links-list a {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.footer-links-list a:hover {
+    color: var(--accent-color);
+    padding-left: 5px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 10px;
+}
+
+.social-btn {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.08);
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.social-btn:hover {
+    background-color: var(--accent-color);
+    color: var(--primary-dark);
+    transform: translateY(-3px);
+}
+
+.footer-divider {
+    border-color: rgba(255, 255, 255, 0.1);
+    margin: 3rem 0 1.5rem 0;
+}
+
+/* Animation Utilities */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animated-fade-in-up {
+    animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animation-delay-1 {
+    animation-delay: 0.15s;
+}
+
+.animation-delay-2 {
+    animation-delay: 0.3s;
+}
+
+.animation-delay-3 {
+    animation-delay: 0.45s;
+}
+
+/* Micro interaction alert message */
+.demo-toast {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: var(--primary-dark);
+    color: var(--white);
+    padding: 1rem 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    z-index: 1060;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transform: translateY(150%);
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.demo-toast.show {
+    transform: translateY(0);
+}
+
+.demo-toast i {
+    color: var(--accent-color);
+    font-size: 1.2rem;
+}
