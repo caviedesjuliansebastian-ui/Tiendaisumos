@@ -434,12 +434,11 @@
                     showToast(`Vendido 1 unidad de ${item.name}. Stock actual: ${item.stock} uds`, "bi-check-circle-fill");
                 }
 
-                // Check general critical stock counter in stat-card
+        
                 updateCriticalAlertCounter();
             }
         }
 
-        // Show Toast function
         function showToast(message, iconClass = "bi-check-circle-fill") {
             const toast = document.getElementById("demoNotification");
             const toastText = document.getElementById("demoToastText");
@@ -447,7 +446,6 @@
             toastText.innerHTML = `<i class="bi ${iconClass} me-2 text-warning"></i>${message}`;
             toast.classList.add("show");
 
-            // Clear previous timeout if any
             if (window.toastTimeout) {
                 clearTimeout(window.toastTimeout);
             }
@@ -457,7 +455,6 @@
             }, 3500);
         }
 
-        // Update critical items count dynamically on the stats panel
         function updateCriticalAlertCounter() {
             const criticalCount = inventoryData.filter(item => item.stock <= 10).length;
             const formatted = criticalCount < 10 ? `0${criticalCount}` : criticalCount;

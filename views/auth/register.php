@@ -6,31 +6,25 @@
     <link rel="shortcut icon" href="../../public/img/agro_hero.png" type="image/png">
     <title>Registro de Usuarios - AgroStock</title>
     
-    <!-- Bootstrap 5 CSS via CDN -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     
-    <!-- Bootstrap Icons via CDN -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
     
-    <!-- Custom Style Sheet -->
     <link href="../../public/css/custom.css" rel="stylesheet">
 </head>
 <body>
 
-    <!-- Back to Home Floating Button -->
     <a href="../../public/index.php" class="back-to-home" title="Volver al Inicio" id="backToHomeBtn">
         <i class="bi bi-arrow-left fs-5"></i>
     </a>
 
     <div class="auth-wrapper">
-        <!-- Decorative background circles -->
         <div class="auth-bg-circle auth-bg-circle-1"></div>
         <div class="auth-bg-circle auth-bg-circle-2"></div>
 
         <div class="card auth-card">
             <div class="row g-0">
                 
-                <!-- Left Side: Branding and Info -->
                 <div class="col-lg-5 d-none d-lg-flex auth-brand-side">
                     <div>
                         <a href="../../public/index.php" class="auth-brand-logo" id="brandLogo">
@@ -59,45 +53,30 @@
                     </div>
                 </div>
 
-                <!-- Right Side: Form -->
                 <div class="col-lg-7 col-12 auth-form-side">
                     <div class="auth-form-header">
                         <h1 class="auth-form-title" id="formHeaderTitle">Crear Cuenta</h1>
                         <p class="auth-form-subtitle" id="formHeaderSubtitle">Regístrate gratis para comenzar a gestionar tu inventario</p>
                     </div>
 
-                    <form action="guardar_usuario.php" method="POST" id="registerForm">
+                    <form action="../../controllers/auth/registerController.php" method="POST" id="registerForm">
                         
-                        <div class="row g-2">
-                            <!-- Nombre Input -->
-                            <div class="col-sm-6 mb-3">
-                                <label for="nombre" class="form-label-custom">Nombre</label>
-                                <div class="auth-input-group">
-                                    <i class="bi bi-person auth-input-icon"></i>
-                                    <input type="text" class="form-control auth-input-control" id="nombre" name="nombre" placeholder="Juan" required>
-                                </div>
-                            </div>
-
-                            <!-- Apellido Input -->
-                            <div class="col-sm-6 mb-3">
-                                <label for="apellido" class="form-label-custom">Apellido</label>
-                                <div class="auth-input-group">
-                                    <i class="bi bi-person-badge auth-input-icon"></i>
-                                    <input type="text" class="form-control auth-input-control" id="apellido" name="apellido" placeholder="Pérez" required>
-                                </div>
+                        <div class="mb-3"> 
+                            <label for="usuario" class="form-label-custom">Usuario</label>
+                            <div class="auth-input-group">
+                                <i class="bi bi-person auth-input-icon"></i>
+                                <input type="text" class="form-control auth-input-control" id="usuario" name="usuario" placeholder="Ingrese Usuario" required>
                             </div>
                         </div>
 
-                        <!-- Email Input -->
                         <div class="mb-3">
                             <label for="correo" class="form-label-custom">Correo Electrónico</label>
                             <div class="auth-input-group">
                                 <i class="bi bi-envelope auth-input-icon"></i>
-                                <input type="email" class="form-control auth-input-control" id="correo" name="correo" placeholder="ejemplo@agrostock.com" required>
+                                <input type="email" class="form-control auth-input-control" id="correo" name="correo" placeholder="ejemplo@correo.com" required>
                             </div>
                         </div>
 
-                        <!-- Password Input -->
                         <div class="mb-4">
                             <label for="contraseña" class="form-label-custom">Contraseña</label>
                             <div class="auth-input-group">
@@ -109,35 +88,31 @@
                             </div>
                         </div>
 
-                        <!-- Terms and Conditions -->
                         <div class="form-check mb-4">
-                            <input class="form-check-input" type="checkbox" id="acceptTerms" required style="cursor: pointer;">
-                            <label class="form-check-label text-muted fs-7" for="acceptTerms" style="cursor: pointer; user-select: none;">
+                            <input class="form-check-input" type="checkbox" id="terminos" name="terminos" required style="cursor: pointer;">
+                            <label class="form-check-label text-muted fs-7" for="terminos" style="cursor: pointer; user-select: none;">
                                 Acepto los <a href="#" class="text-primary-color text-decoration-none fw-semibold">Términos y Condiciones</a> y la <a href="#" class="text-primary-color text-decoration-none fw-semibold">Política de Privacidad</a>
                             </label>
                         </div>
 
-                        <!-- Submit Button -->
-                        <button type="submit" class="btn btn-primary-custom auth-action-btn w-100 fw-bold" id="submitRegisterBtn">
+                        <button type="submit" class="btn btn-primary-custom auth-action-btn w-100 fw-bold mb-4" id="submitRegisterBtn">
                             <i class="bi bi-person-plus me-2"></i>Registrarse
                         </button>
                     </form>
 
-                    <!-- Navigation Footer -->
-                    <div class="auth-links-footer">
-                        ¿Ya tienes una cuenta? 
-                        <a href="login.php" id="goToLoginLink">Inicia Sesión</a>
+                    <div class="text-center auth-form-footer">
+                        <span class="text-muted">¿Ya tienes una cuenta?</span> 
+                        <a href="login.php" id="goToLoginLink" class="text-primary-color text-decoration-none fw-semibold ms-1">Inicia Sesión</a>
                     </div>
+                   
                 </div>
 
             </div>
         </div>
     </div>
 
-    <!-- Bootstrap 5 JS Bundle with Popper via CDN -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
-    <!-- Vanilla JS for password visibility toggle -->
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             const togglePasswordBtn = document.getElementById('togglePassword');
@@ -146,11 +121,9 @@
 
             if (togglePasswordBtn && passwordInput && toggleIcon) {
                 togglePasswordBtn.addEventListener('click', function () {
-                    // Toggle type attribute
                     const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
                     passwordInput.setAttribute('type', type);
                     
-                    // Toggle icon class and accessibility attribute
                     if (type === 'text') {
                         toggleIcon.classList.remove('bi-eye-slash');
                         toggleIcon.classList.add('bi-eye');
